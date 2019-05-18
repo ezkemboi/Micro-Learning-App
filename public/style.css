@@ -1,0 +1,8 @@
+body {
+    font-family: 'Courier New', Courier, monospace
+}
+
+.sign-form {
+    align-self: center;
+    background-color: red !important;
+}
