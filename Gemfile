@@ -7,6 +7,7 @@ gem 'activerecord'
 gem 'sinatra-activerecord'
 gem 'pg'
 gem 'bcrypt'
+gem 'rake'
 
 group :test do
     gem 'rspec'

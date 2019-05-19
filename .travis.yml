@@ -4,11 +4,10 @@ services:
   - postgresql
 
 before_install:
-  - bundle exec rake db:create
-  - bundle exec rake db:migrate
+  - gem install bundler
 
 script:
-  - bundle exec rspec
+  - bundle exec rspec spec/controllers/application_controller.rb
 
 after_script:
   - bundle exec rake coveralls:push
