@@ -17,6 +17,21 @@ class UserController < ApplicationController
        @user.save
 
        # Redirect user to homepage after successful registration
-       redirect "/dashboard"
+       redirect "/login"
+    end
+    
+    # Login method, get login and login user to the system
+
+    get '/login' do
+        erb :login
+    end 
+
+    post '/login_user' do
+        user = User.find_by(:email => params[:email])
+        if user && user.authenticate(params[:password])
+            redirect '/dashboard'
+        else
+            redirect '/'
+        end
     end
 end
