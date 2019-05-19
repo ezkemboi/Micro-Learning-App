@@ -22,7 +22,7 @@ Change directory: `cd Micro-Learning-App`
 
 Install gems: `gem install`
 
-Run app: `ruby app.rb`
+Run app: `shotgun`
 
 Run tests: `ruby app_test.rb`
 
