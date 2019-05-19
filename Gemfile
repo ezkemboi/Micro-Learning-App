@@ -7,3 +7,10 @@ gem 'activerecord'
 gem 'sinatra-activerecord'
 gem 'pg'
 gem 'bcrypt'
+
+group :test do
+    gem 'rspec'
+    gem 'rack-test'
+    gem 'capybara'
+    gem 'coveralls', require: false
+end

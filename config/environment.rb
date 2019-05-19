@@ -5,7 +5,7 @@ require 'bundler/setup'
 Bundler.require(:default, ENV['APP_ENV'])
 
 # Set up database connection
-configure :production, :development do
+configure :production, :development, :test do
     db = URI.parse(ENV['DATABASE_URL'] || 'postgresql://localhost/microlearningdb') 
     ActiveRecord::Base.establish_connection(
         :adapter => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
