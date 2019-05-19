@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/me-x-mi/Micro-Learning-App.svg?branch=master)](https://travis-ci.org/me-x-mi/Micro-Learning-App)
+[![Coverage Status](https://coveralls.io/repos/github/me-x-mi/Micro-Learning-App/badge.svg?branch=master)](https://coveralls.io/github/me-x-mi/Micro-Learning-App?branch=master)
 # Micro-Learning-App
 Micro-Learning app is a responsive web application that sends you one page per day about something you want to learn. Could be: a new Language, a random Wikipedia page, React documentation, a page from the CIA World Factbook, anything!
 
