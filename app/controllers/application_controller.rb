@@ -9,8 +9,4 @@ class ApplicationController < Sinatra::Base
         erb :index
     end
 
-    # Dashboard Page where logged user can view article page
-    get '/dashboard' do
-        erb :dashboard
-    end
 end
