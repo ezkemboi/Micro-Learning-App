@@ -1,10 +1,6 @@
 require_relative '../models/user'
 
 class UserController < ApplicationController
-    # Get register page
-    get '/register' do
-        erb :register
-    end
 
     # Post method for registration
     post '/register_user' do

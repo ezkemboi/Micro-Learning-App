@@ -8,6 +8,7 @@ gem 'sinatra-activerecord'
 gem 'pg'
 gem 'bcrypt'
 gem 'rake'
+gem 'httparty'
 
 group :test do
     gem 'rspec'

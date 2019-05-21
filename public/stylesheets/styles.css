@@ -1,0 +1,40 @@
+body {
+    margin: 0px;
+}
+.homepage {
+    margin: 0 5%;
+    height: 100vh;
+    background-color: #f6f8fa;
+}
+.homepage h1 {
+    text-align: center;
+    padding-top: 5%;
+}
+.homepage-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+.homepage-right {
+    width: 100%;
+}
+.homepage-left {
+    width: 100%;
+}
+#welcome-text {
+    text-align: center;
+    font-size: 24px;
+}
+#form-input-box {
+    width: 45%;
+}
+button {
+    background-color: #008CBA;
+    color: white;
+    border-radius: 12px;
+    padding: 5px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
