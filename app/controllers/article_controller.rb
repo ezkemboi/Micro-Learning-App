@@ -13,7 +13,12 @@ class ArticleController < ApplicationController
         # Take the first article
         @article = response["articles"][0]
         if @article
+            @title = @article['title']
             @description = @article['description']
+            @content = @article['content']
+            @author = @article['author']
+            @publisheddate = @article['publishedAt']
+            @url = @article['url']
             erb :dashboard
         else
             # Return Oops message

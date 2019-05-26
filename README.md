@@ -26,7 +26,7 @@ Install gems: `gem install`
 
 Run app: `shotgun`
 
-Run tests: `ruby app_test.rb`
+Run tests: `bundle exec rspec`
 
 
 # Deployment Link
