@@ -1,8 +1,11 @@
+require 'sinatra'
 require 'httparty'
+require_relative '../models/user'
 
 class ArticleController < ApplicationController
     # Dashboard where user can get and read articles
     get '/dashboard' do
+        print('---this is not showing----', session[:user_id])
         erb :dashboard
     end 
 

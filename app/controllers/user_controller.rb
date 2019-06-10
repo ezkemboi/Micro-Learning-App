@@ -11,7 +11,8 @@ class UserController < ApplicationController
        @user.email = params[:email]
        @user.password = params[:password]
        @user.save
-
+       # Save use id to session
+       session[:user_id] = @user.id
        # Redirect user to homepage after successful registration
        redirect "/login"
     end
@@ -23,8 +24,11 @@ class UserController < ApplicationController
     end 
 
     post '/login_user' do
-        user = User.find_by(:email => params[:email])
-        if user && user.authenticate(params[:password])
+        @user = User.find_by(:email => params[:email])
+        if @user && @user.authenticate(params[:password])
+            # Session then redirect
+            session[:user_id] = @user.id
+
             redirect '/dashboard'
         else
             redirect '/'
