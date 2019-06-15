@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
     has_secure_password
+    has_many :articles
 
     VALID_EMAIL = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
     # Validate inputs to users table e.g email should be unique etc.

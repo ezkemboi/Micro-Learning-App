@@ -15,14 +15,21 @@
         required 
         />
         <br />
-        <button type="submit">Submit</button>
+        <% if @disable == true %>
+          <button type="submit" class="disabled-button" disabled>Disabled</button>
+        <% else %>
+          <button type="submit">Submit</button>
+        <% end %>
       </form>
       <br />
-      <h3><%= @title %></h3>
-      <p><%= @description %></p>
-      <p><%= @content %></p>
-      <h5>Author: <%= @author %></h5>
-      <p><b>Published on:</b> <%= @publisheddate %></p>
-      <a href='<%=@url%>'>Read More</a>
+      <% if @disable == true %>
+        <h3><%= @title %></h3>
+        <p><%= @content %></p>
+        <h5>Author: <%= @author %></h5>
+        <p><b>Published on:</b> <%= @publisheddate %></p>
+        <a href='<%=@url%>'>Read More</a>
+      <% else %>
+        <p>Search to display articles here!!!</p>
+      <% end %>
     </div>
   </div>

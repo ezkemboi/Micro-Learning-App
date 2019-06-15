@@ -44,3 +44,7 @@ button {
 .article-search-store p {
     color: red;
 }
+
+.disabled-button {
+    background-color: red !important;
+}

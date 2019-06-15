@@ -12,10 +12,10 @@ describe 'ArticleController' do
         expect(current_path).to eq('/article')
     end
 
-    it 'should search for an article' do
-        visit '/dashboard'
-        fill_in 'searchtopic', with: 'ruby'
-        click_button 'Submit'
-        expect(current_path).to eq('/article')
-    end
+    # it 'should search for an article' do
+    #     visit '/dashboard'
+    #     fill_in 'searchtopic', with: 'kenya'
+    #     click_button 'Submit'
+    #     expect(current_path).to eq('/article')
+    # end
 end
