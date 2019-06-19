@@ -6,8 +6,9 @@ class ArticleController < ApplicationController
     # Dashboard where user can get and read articles
     get '/dashboard' do
         # Check if there is an article that is less than 24 hrs old
+        protected!
         @currenttime = Time.new
-        @articles = Article.where({created_at: (@currenttime - 1.day)..@currenttime})
+        @articles = Article.where({user_id: session["user_id"],created_at: (@currenttime - 1.day)..@currenttime})
         # Always take the first one, 
         # although this might not happen as no article will be searched if article exists.
         if @articles.length > 0
@@ -25,6 +26,7 @@ class ArticleController < ApplicationController
     end 
 
     post '/article' do
+        protected!
         # If dashboard shows an article disable search for article
         @newArticle = Article.new
 
@@ -39,6 +41,7 @@ class ArticleController < ApplicationController
             @newArticle.author = @article['author']
             @newArticle.publisheddate = @article['publishedAt']
             @newArticle.url = @article['url']
+            @newArticle.user_id = session["user_id"]
             @newArticle.save
             redirect '/dashboard'
         else
