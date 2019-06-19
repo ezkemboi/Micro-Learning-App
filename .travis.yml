@@ -5,6 +5,10 @@ services:
 
 before_install:
   - gem install bundler
+  - bundle install
+  - psql -c 'CREATE DATABASE test;' -U postgres
+  - bundle exec rake db:create
+  - bundle exec rake db:migrate
 
 script:
   - bundle exec rspec
